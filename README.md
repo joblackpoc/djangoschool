@@ -83,12 +83,13 @@
 <br></div>
 
 # create home.html in template
-<br>{% extends 'school/base.html' %} -> extends from template base.html
+<br>{% extends 'school/base.html' %} 
+<br> extends from template base.html
 <br>{% block content %}
 <br><div class="container">
-  <br>--<h1>Welcome to Django Framework</h1>
-  <br>--<p>Learn Python Django From Uncle Engineer</p> 
-  <br>--<img src="url image" width="800"></img>
+  <br><h1>Welcome to Django Framework</h1>
+  <br><p>Learn Python Django From Uncle Engineer</p> 
+  <br><img src="url image" width="800"></img>
 <br></div>
 <br>{% endblock content %}
 
