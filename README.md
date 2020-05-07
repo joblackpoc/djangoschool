@@ -1,6 +1,6 @@
 # djangoschool
 - study from uncle engineer
-##install VS Code
+# install VS Code
 - https://code.visualstudio.com/download
 
 # extensions
@@ -17,18 +17,17 @@
 - Ctrl+Shift+P
 - python -> Select Linter -> pylint
 
+# install python 3.8
 
-## install python 3.8
-
-<br> set user environment on top
+<br>set user environment on top
 <br>C:\Python38\
-C:\Python38\Scripts\
-C:\Python38\Lib\site-packages\
+<br>C:\Python38\Scripts\
+<br>C:\Python38\Lib\site-packages\
 
-upgrade pip
-python -m pip install --upgrade pip
+-upgrade pip
+<br>python -m pip install --upgrade pip
 
-install pylint
+-install pylint
 pip install pylint
 pip install --upgrade pylint
 
