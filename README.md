@@ -20,8 +20,8 @@
 
 ## install python 3.8
 
-set user environment on top
-C:\Python38\
+<br> set user environment on top
+<br>C:\Python38\
 C:\Python38\Scripts\
 C:\Python38\Lib\site-packages\
 
