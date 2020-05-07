@@ -24,35 +24,35 @@
 <br>C:\Python38\Lib\site-packages\
 
 * upgrade pip
-- python -m pip install --upgrade pip
+<br> python -m pip install --upgrade pip
 
-* nstall pylint
-- pip install pylint
-- pip install --upgrade pylint
-
+* install pylint
+<br>pip install pylint
+<br>pip install --upgrade pylint
+<br>
 * install wheel
-- pip install wheel
-- pip install --upgrade wheel
-
+<br>pip install wheel
+<br>pip install --upgrade wheel
+<br>
 * install virtualenv
-- pip install virtualenv
-
+<br>pip install virtualenv
+<br>
 * upgrade virtualenv 
-- pip install --upgrade virtualenv
-
+<br>pip install --upgrade virtualenv
+<br>
 * สร้าง virtualenv ชื่อว่า venv
-- virtualenv venv
-
+<br>virtualenv venv
+<br>
 * activate virtualenv
 <br> .\venv\scripts\activate
 
 <br>จะได้ => (venv) C:\folder's name>
 
 # install django 3.0
-- pip install django==3.0
+<br>pip install django==3.0
 
 * create project
-- django-admin startproject djangoschool
+<br>django-admin startproject djangoschool
 
 * run server local
 <br>cd djangoschool
@@ -73,10 +73,12 @@
 * create html file -> base.html 
 <br>https://www.dropbox.com/s/rzc5lldcrfdmpwy/base.html?dl=0
 <br>and in the body 
-* put this code
+<br>  put this code
 <br><div class="container">
 <br>{% block content %}
-	- put your content here-
+	<br>
+	<br>put your content here
+        <br>
 <br>{% endblock content %}
 <br></div>
 
@@ -84,9 +86,9 @@
 <br>{% extends 'school/base.html' %} -> extends from template base.html
 <br>{% block content %}
 <br><div class="container">
-  <br><h1>Welcome to Django Framework</h1>
-  <br><p>Learn Python Django From Uncle Engineer</p> 
-  <br><img src="image address" width="800"></img>
+  <br>--<h1>Welcome to Django Framework</h1>
+  <br>--<p>Learn Python Django From Uncle Engineer</p> 
+  <br>--<img src="url image" width="800"></img>
 <br></div>
 <br>{% endblock content %}
 
