@@ -1,24 +1,24 @@
 # djangoschool
-study from uncle engineer
-install VS Code
-https://code.visualstudio.com/download
+- study from uncle engineer
+- install VS Code
+- https://code.visualstudio.com/download
 
-*extensions
-python -> ms-python.python Microsoft
-Bootstrap 4, Font awesome 4 -> Ashok Koyi
-Bracket Pair Colorizer -> CoenraadS
-Django -> Baptiste Darthenay
-vscode-icons -> VSCode Icons Team
+* extensions
+- python -> ms-python.python Microsoft
+- Bootstrap 4, Font awesome 4 -> Ashok Koyi
+- Bracket Pair Colorizer -> CoenraadS
+- Django -> Baptiste Darthenay
+- vscode-icons -> VSCode Icons Team
 
-*settings
-Commonly Used
-files Auto Save
-onFocusChange
-Ctrl+Shift+P
-python -> Select Linter -> pylint
+* settings
+- Commonly Used
+- files Auto Save
+- onFocusChange
+- Ctrl+Shift+P
+- python -> Select Linter -> pylint
 
 
-install python 3.8
+* install python 3.8
 
 set user environment on top
 C:\Python38\
