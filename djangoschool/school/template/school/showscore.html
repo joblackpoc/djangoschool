@@ -1,0 +1,20 @@
+{% extends 'school/base.html' %}
+{% block content %}
+<div class="container">
+    <table style="width:100%" >
+        <caption>Monthly savings</caption>
+        <tr>
+            <th>วิชา</th>
+            <th>ชื่อนักเรียน</th>
+            <th>คะแนน</th>
+        </tr>
+        {% for sc in score %}
+        <tr>
+            <td>{{sc.subject}}</td>
+            <td>{{sc.student_name}}</td>
+            <td>{{sc.score}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content %}

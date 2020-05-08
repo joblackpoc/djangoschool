@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import ExamScore
+
 
 def HomePage(request):
     #return HttpResponse('<h1>Hello world !!</h1>')
@@ -11,4 +13,24 @@ def AboutPage(request):
 
 
 def ContactUs(request):
-    return render(request,'school/contactus.html')
+    return render(request,'school/contactus.html')    
+
+
+def ShowScore(request):
+    score = ExamScore.objects.all()
+    context = {'score':score}
+
+    return render(request,'school/showscore.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
