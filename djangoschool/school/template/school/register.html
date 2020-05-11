@@ -1,0 +1,29 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="first_name">Name:</label>
+        <input type="text" class="form-control w-50" placeholder="Firstname" id="first_name" name="first_name">
+    </div>
+    <div class="form-group">
+        <label for="last_name">Name:</label>
+        <input type="text" class="form-control w-50" placeholder="Lastname" id="last_name" name="last_name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control w-50" placeholder="Enter email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control w-50" placeholder="Enter password" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+    
+{% endblock content %}
+    
+
