@@ -88,7 +88,7 @@
     <div>
       
       {% if user.is_authenticated %}
-        Hello &nbsp;{{ user.first_name }}&nbsp;&nbsp;{{ user.last_name }}
+        Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}
         <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
       {% else %}  
       <a class="btn btn-primary" href=" {% url 'register' %} ">Register</a>
