@@ -6,10 +6,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="description" content="study django from uncle engineer">
+    <meta name="author" content="๊Uncle Joblack POC">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Uncle POC</title>
+    <title>Uncle Joblack POC</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
 
@@ -59,66 +59,66 @@
     
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #64bbfd;'>
-     <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #ffd666;'> -->
-  <!-- <a class="navbar-brand" href="#">Home</a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #64bbfd;'>-->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #99c7f1;'>
+    <!-- <a class="navbar-brand" href="#">Home</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home-page' %}">Home <span class="sr-only">(current)</span></a>
-      </li>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home-page' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'about-page' %}">About</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about-page' %}">About</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'contact-page' %}">Contact Us</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact-page' %}">Contact Us</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'show-score' %}">Show Score</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'show-score' %}">Show Score</a>
+        </li>
 
-    </ul>
-    <div>
-      
-      {% if user.is_authenticated %}
-        Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}
-        <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
-      {% else %}  
-      <a class="btn btn-primary" href=" {% url 'register' %} ">Register</a>
-      <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
-      {% endif %}
-   
+      </ul>
+      <div>
+        
+        {% if user.is_authenticated %}
+          Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}
+          <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
+        {% else %}  
+        <a class="btn btn-primary" href=" {% url 'register' %} ">Register</a>
+        <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+        {% endif %}
+    
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main role="main">
+  <main role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="container" style="margin-top: 100px; margin-bottom: 50px" >
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container" style="margin-top: 100px; margin-bottom: 50px" >
 
-  </div>
+    </div>
 
-  <div class="container">
-    <!-- Example row of columns -->
-   {% block content %}
-   {% endblock %}
-    <hr>
+    <div class="container">
+      <!-- Example row of columns -->
+    {% block content %}
+    {% endblock %}
+      <hr>
 
-  </div> <!-- /container -->
+    </div> <!-- /container -->
 
-</main>
+  </main>
 
-<footer class="container">
-  <p>&copy; 2020 Uncle POC</p>
-</footer>
+  <footer class="container">
+    <p>&copy; 2020 Uncle Joblack POC</p>
+  </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Popper JS -->
