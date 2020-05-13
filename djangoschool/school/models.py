@@ -27,9 +27,18 @@ class AllStudent(models.Model):
     student_name = models.CharField(max_length=200)
     student_id = models.CharField(max_length=100)
     student_tel = models.CharField(max_length=100, blank=True, null=True)
+<<<<<<< HEAD
     parent_name = models.CharField(max_length=200, blank=True, null=True)
     parent_tel = models.CharField(max_length=100, blank=True, null=True)
     other = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.student_name+' '+ self.level+' '+ self.student_tel +' '+ self.parent_name +' '+ self.parent_tel
+=======
+    parent_name = models.CharField(max_length=200, blank=True,null=True)
+    parent_tel = models.CharField(max_length=100,blank=True,null=True)
+    other = models.TextField(blank=True,null=True)
+
+    def __str__(self):
+        return self.student_name+' '+ self.level+' '+ self.student_tel
+>>>>>>> 77f856dad4c74396dcef78d7b818e46249aa8eba
