@@ -1,7 +1,7 @@
 from django.db import models
 
 class ExamScore(models.Model):
-    allsubject = (('คณิตศาสตร์','คณิตศาสตร์'),
+    allsubject = (('คณิตศาสตร์','math'),
                     ('วิทยาศาสตร์','วิทยาศาสตร์'),
                     ('ศิลป','ศิลป'),
                     ('อังกฤษ','ภาษาอังกฤษ'),
@@ -32,4 +32,4 @@ class AllStudent(models.Model):
     other = models.TextField(blank=True,null=True)
 
     def __str__(self):
-        return self.student_name+' '+ self.level+' '+ self.student_tel
+        return '{}-{}-{}'.format(self.student_id,self.student_name,self.student_tel)

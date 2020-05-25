@@ -1,0 +1,30 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<div>
+    <form class="example" method="POST">
+      {% csrf_token %}
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+</div>
+<div class="container">
+  
+  {% if checked == 'found' %}
+  <br>
+  <p>ID: {{result.student_id}}  Name: {{result.student_name}}</p>
+  {% elif checked == 'notfound' %}
+  <br>
+  <p>{{result}}</p>
+  {% else %}
+  <br>
+  <p>Error Other</p>
+  {% endif %}
+    
+  
+
+</div>
+    
+{% endblock content %}
+
+    

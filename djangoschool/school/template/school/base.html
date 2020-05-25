@@ -26,7 +26,9 @@
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
+    <!--Load icon library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -89,10 +91,12 @@
         
         {% if user.is_authenticated %}
           Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}
+          <a class="btn btn-primary" href="{% url 'search-page' %}">Search</a>
           <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
         {% else %}  
         <a class="btn btn-primary" href=" {% url 'register' %} ">Register</a>
         <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+        
         {% endif %}
     
       </div>

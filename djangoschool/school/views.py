@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from .models import ExamScore
+from django.contrib.auth.decorators import login_required
+from .models import ExamScore, AllStudent
 
 
 def HomePage(request):
@@ -39,6 +40,29 @@ def Register(request):
         return redirect('home-page')
     return render(request,'school/register.html')
 
+##########Search Page############
+    #MODELS.objects.all() ดึงค่าทั้งหมด
+    #MODELS.objects.get(student_id='')ดึงค่าตัวเดียว หากเกินจะ error
+    #MODELS.objects.filter(level='ม.1.')ดึงหลายค่า
+    #search = AllStudent.objects.get(student_id=)
+#################################
+@login_required(login_url='login')
+def SearchStudent(request):
+
+    if request.method == 'POST':
+        data = request.POST.copy()
+        searchid = data.get('search')
+        print(searchid, type(searchid))
+        try:
+            result = AllStudent.objects.get(student_id=searchid)
+            print('RESULT',result)
+            context = {'result':result, 'checked':'found'}
+        except:
+            context = {'result':'No Data Please put student id','checked':'notfound'}
+
+        return render(request, 'school/search.html', context)
+
+    return render(request, 'school/search.html')
 
 
 
