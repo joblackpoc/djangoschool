@@ -32,8 +32,4 @@ class AllStudent(models.Model):
     other = models.TextField(blank=True, null=True)
 
     def __str__(self):
-<<<<<<< HEAD
-        return '{}-{}-{}'.format(self.student_id,self.student_name,self.student_tel)
-=======
-        return self.student_name+' ชั้น '+ self.level+' โทร.'+ self.student_tel +' ผู้ปกครอง '+ self.parent_name +' โทร. '+ self.parent_tel
->>>>>>> 4596d35ae8ae9ba37200cfb91b36b6150ac0253a
+        return '{}-{}'.format(self.student_id,self.student_name)
