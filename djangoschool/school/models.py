@@ -27,9 +27,13 @@ class AllStudent(models.Model):
     student_name = models.CharField(max_length=200)
     student_id = models.CharField(max_length=100)
     student_tel = models.CharField(max_length=100, blank=True, null=True)
-    parent_name = models.CharField(max_length=200, blank=True,null=True)
-    parent_tel = models.CharField(max_length=100,blank=True,null=True)
-    other = models.TextField(blank=True,null=True)
+    parent_name = models.CharField(max_length=200, blank=True, null=True)
+    parent_tel = models.CharField(max_length=100, blank=True, null=True)
+    other = models.TextField(blank=True, null=True)
 
     def __str__(self):
+<<<<<<< HEAD
         return '{}-{}-{}'.format(self.student_id,self.student_name,self.student_tel)
+=======
+        return self.student_name+' ชั้น '+ self.level+' โทร.'+ self.student_tel +' ผู้ปกครอง '+ self.parent_name +' โทร. '+ self.parent_tel
+>>>>>>> 4596d35ae8ae9ba37200cfb91b36b6150ac0253a
