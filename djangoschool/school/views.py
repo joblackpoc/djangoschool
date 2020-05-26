@@ -58,7 +58,7 @@ def SearchStudent(request):
             print('RESULT',result)
             context = {'result':result, 'checked':'found'}
         except:
-            context = {'result':'No Data Please put student id','checked':'notfound'}
+            context = {'result':'Have no Data in System','checked':'notfound'}
 
         return render(request, 'school/search.html', context)
 

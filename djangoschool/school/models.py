@@ -30,6 +30,7 @@ class AllStudent(models.Model):
     parent_name = models.CharField(max_length=200, blank=True, null=True)
     parent_tel = models.CharField(max_length=100, blank=True, null=True)
     other = models.TextField(blank=True, null=True)
+    photo = models.ImageField(upload_to="studentphoto", blank=True, null=True)
 
     def __str__(self):
         return '{}-{}'.format(self.student_id,self.student_name)
