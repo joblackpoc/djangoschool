@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .models import ExamScore, AllStudent
-
+from .models import ExamScore, AllStudent, Profile
+from django.core.files.storage import FileSystemStorage
 
 def HomePage(request):
     return render(request,'school/home.html')
@@ -58,14 +58,53 @@ def SearchStudent(request):
             print('RESULT',result)
             context = {'result':result, 'checked':'found'}
         except:
-            context = {'result':'Have no Data in System','checked':'notfound'}
+            context = {'result':'Have no Data from your Keyword','checked':'notfound'}
 
         return render(request, 'school/search.html', context)
 
     return render(request, 'school/search.html')
 
 
+#########Edit Profile###########
+@login_required
+def EditProfile(request):
 
+	username = request.user.username
+	current = User.objects.get(username=username)
+
+	if request.method == 'POST' and request.FILES['photo_profile']:
+		data = request.POST.copy()
+		first_name = data.get('first_name')
+		last_name = data.get('last_name')
+		email = data.get('email')
+		#password = data.get('password')
+		
+		myprofile = User.objects.get(username=username)
+		###file system####
+		try:
+			setprofile = Profile.objects.get(user=myprofile)
+		except:
+			setprofile = Profile()
+			setprofile.user = myprofile
+		file_image = request.FILES['photo_profile']
+		file_image_name = request.FILES['photo_profile'].name
+		fs = FileSystemStorage()
+		filename = fs.save(file_image_name,file_image)
+		upload_file_url = fs.url(filename)
+		setprofile.photoprofile = upload_file_url[6:]
+		setprofile.save()
+		#######
+		myprofile.username = email
+		myprofile.first_name = first_name
+		myprofile.last_name = last_name
+		myprofile.email = email
+		#myprofile.set_password(password)
+		myprofile.save()
+		# from django.shortcuts import redirect
+		return redirect('edit-profile')
+
+	context = {'data':current}
+	return render(request, 'school/editprofile.html',context)
 
 
 

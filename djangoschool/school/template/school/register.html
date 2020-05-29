@@ -1,7 +1,8 @@
 {% extends 'school/base.html' %}
 
 {% block content %}
-
+<div class="container">
+  
 <form method="POST">
     {% csrf_token %}
     <div class="form-group">
@@ -9,12 +10,12 @@
         <input type="text" class="form-control w-50" placeholder="Firstname" id="first_name" name="first_name">
     </div>
     <div class="form-group">
-        <label for="last_name">Name:</label>
-        <input type="text" class="form-control w-50" placeholder="Lastname" id="last_name" name="last_name">
+        <label for="last_name">LastName:</label>
+        <input type="text" class="form-control w-50" placeholder="Lastname" id="last_name" name="last_name" >
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control w-50" placeholder="Enter email" id="email" name="email">
+      <input type="email" class="form-control w-50" placeholder="Enter email" id="email" name="email" >
     </div>
 
     <div class="form-group">
@@ -23,7 +24,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-    
+</div>    
 {% endblock content %}
     
 

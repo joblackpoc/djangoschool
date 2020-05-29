@@ -34,6 +34,19 @@
 <br>pip install wheel
 <br>pip install --upgrade wheel
 <br>
+
+*install request
+<br>pip install request
+<br>
+
+*install beautifulsoup4
+<br>pip install beautifulsoup4
+<br>
+
+*install bootstrap4
+<br>pip install bootstrap4
+<br>
+
 * install virtualenv
 <br>pip install virtualenv
 <br>

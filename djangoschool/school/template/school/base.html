@@ -90,12 +90,13 @@
       <div>
         
         {% if user.is_authenticated %}
-         <font color="black">Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}</font> 
+        <a href=" {% url 'edit-profile' %}">
+         <font color="black">Hello &nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}</font></a>
           &nbsp;
           {% if user.profile.photoprofile %}
             <img src="{{user.profile.photoprofile.url}}" width="45" class="rounded-circle account-img">            
           {% endif %}
-            
+          <a class="btn btn-warning" href="{% url 'edit-profile' %}">Profile</a>
           <a class="btn btn-primary" href="{% url 'search-page' %}">Search</a>
           <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
         {% else %}  
