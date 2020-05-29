@@ -85,6 +85,14 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'show-score' %}">Show Score</a>
         </li>
+        
+        <li>
+          {% if user.is_authenticated %}
+            {% if user.profile.usertype == 'teacher'  %}
+            <a class="btn btn-primary" href="{% url 'search-page' %}">Search</a>
+            {% endif %}
+         {% endif %}
+        </li>
 
       </ul>
       <div>
@@ -97,7 +105,7 @@
             <img src="{{user.profile.photoprofile.url}}" width="45" class="rounded-circle account-img">            
           {% endif %}
           <a class="btn btn-warning" href="{% url 'edit-profile' %}">Profile</a>
-          <a class="btn btn-primary" href="{% url 'search-page' %}">Search</a>
+          <a class="btn btn-success" href="{% url 'document' %}">Document</a>
           <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
         {% else %}  
         <a class="btn btn-primary" href=" {% url 'register' %} ">Register</a>

@@ -1,5 +1,4 @@
 {% extends 'school/base.html' %}
-
 {% block content %}
 <div>
     <div class="container">
@@ -22,12 +21,14 @@
       <input type="email" class="form-control w-50" placeholder="Enter email" id="email" name="email"  value="{{data.email}}">
     </div>
     <div>
-        <label for="">Select photo</label><br>
+        <br>
+        <label for="">Select photo</label>&nbsp;
         <input type="file" id="photo_profile" name="photo_profile">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
   </form>
 </div>
 {% endblock content %}
-    
-

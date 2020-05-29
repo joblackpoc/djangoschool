@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .models import ExamScore, AllStudent, Profile
+from .models import ExamScore, AllStudent, Profile, DocumentUpload
 from django.core.files.storage import FileSystemStorage
 
 def HomePage(request):
@@ -87,13 +87,14 @@ def EditProfile(request):
 			setprofile = Profile()
 			setprofile.user = myprofile
 		file_image = request.FILES['photo_profile']
-		file_image_name = request.FILES['photo_profile'].name
+		#file_image_name = request.FILES['photo_profile'].name
 		fs = FileSystemStorage()
-		filename = fs.save(file_image_name,file_image)
+		filename = fs.save(file_image.name, file_image)
 		upload_file_url = fs.url(filename)
 		setprofile.photoprofile = upload_file_url[6:]
+        #setprofile.photoprofile = upload_file_url[6:] ตัดสตริงไป media/
 		setprofile.save()
-		#######
+		#################
 		myprofile.username = email
 		myprofile.first_name = first_name
 		myprofile.last_name = last_name
@@ -107,7 +108,11 @@ def EditProfile(request):
 	return render(request, 'school/editprofile.html',context)
 
 
+def ShowDocument(request):
+    document = DocumentUpload.objects.all()
+    context = {'document':document}
 
+    return render(request, 'school/document.html', context)
 
 
 
